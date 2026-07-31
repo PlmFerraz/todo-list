@@ -1,3 +1,3 @@
-export default function InputField(type, placeholder, value) {
-  return <input type="text" placeholder="Digite uma tarefa" value={value} />;
+export default function InputField({ placeholder, value, onChange }) {
+  return <input placeholder={placeholder} value={value} onChange={onChange} />;
 }
