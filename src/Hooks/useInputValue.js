@@ -5,10 +5,14 @@ export default function useInputValue() {
 
   function changeValue(event) {
     setValue(event.target.value);
-    console.log(event.target.value);
+  }
+
+  function clearValue() {
+    setValue("");
   }
 
   return {
+    clearValue,
     value,
     changeValue,
   };

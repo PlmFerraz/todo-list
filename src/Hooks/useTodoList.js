@@ -4,14 +4,20 @@ export default function useTodoList() {
   const [todos, setTodos] = useState([]);
 
   function addTodo(todo) {
-    console.log(todo);
     setTodos((prev) => {
       return [...prev, todo];
     });
   }
 
-  function removeTodo() {}
+  function removeTodo(item) {
+    setTodos((prev) => {
+      return prev.filter((todo) => {
+        return todo != item;
+      });
+    });
+  }
   return {
+    removeTodo,
     todos,
     addTodo,
   };
